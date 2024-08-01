@@ -185,7 +185,6 @@ Here in this stage, I am building docker compose and deploying to another server
 Final pipeline script
 pipeline {
     agent { label 'Dev-Agent node' }
-    
     stages{
         stage('Checkout'){
             steps{
@@ -203,7 +202,6 @@ pipeline {
                 sh 'sudo docker inspect --type=image AnandGautam123/nodo-todo-app-test:latest '
             }
         }
-        
         stage('Push'){
             steps{
         	     sh "sudo docker login -u AnandGautam123 -p your_personal_Accesss_token"
@@ -251,13 +249,3 @@ Check if the application is running Finally, we can check if the application is 
 
 
 
- 
-
-
-
-
-
-
-
-# DevOps-Todo-app-
-# DevOps-Todo-app-
